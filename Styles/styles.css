@@ -4,11 +4,15 @@ header {
   padding: 1px 15px;
 }
 
+
+
 body {
 
   text-align: left;
   background-color: #EDEDED;
 }
+
+
 
 nav ul {
     list-style-type: none;
@@ -46,12 +50,29 @@ nav li a:hover {
     display: flex;
 }
 
+.row::after {
+  content: "";
+}
+
 .column {
     flex: 50%;
     padding: 5px;
     height: auto;
     text-align: left;
 }
+
+.left {
+  float: left;
+  width: 50%;
+}
+
+.right {
+  float: right;
+  width: 50%;
+}
+
+
+
 
 main {
   background-color: white;
@@ -84,6 +105,8 @@ article ul li:nth-child(even) {
   padding: 7px 10px;
 }
 
+
+
 table, td {
   border: 1px solid;
   text-align: left;
@@ -102,9 +125,25 @@ th {
   font-size: 20px;
 }
 
+
+
 footer {
   font-size: 13px;
   padding: 5px;
   background-color: white;
   text-align: center;
+}
+
+
+
+@media screen and (min-width:500px) and (max-width:700px){
+	.left {
+		width: 100%;
+		float: none;
+	}
+
+	.right {
+		width: 100%;
+		float: none;
+	}
 }
